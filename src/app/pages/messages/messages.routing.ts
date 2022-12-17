@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { MessagesPage } from 'src/app/pages/messages/messages.page';
 
-const routes: Routes = [
+const ROUTES: Routes = [
   {
     path: '',
     component: MessagesPage
@@ -11,7 +11,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(ROUTES)],
   exports: [RouterModule],
 })
 export class MessagesRoutingModule {}

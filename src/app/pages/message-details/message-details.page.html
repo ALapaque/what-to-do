@@ -1,11 +1,3 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button [text]="backButtonText" defaultHref="/"></ion-back-button>
-    </ion-buttons>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true" *ngIf="message$ | async as message">
   <ion-item>
     <ion-icon name="person-circle" color="primary"></ion-icon>

@@ -1,0 +1,27 @@
+<ion-header [translucent]='true'>
+  <ion-toolbar>
+    <ng-container *ngIf='isMessageDetailPage$ | async; else defaultHeaderTemplate'>
+      <ion-buttons slot='start'>
+        <ion-back-button defaultHref='/'></ion-back-button>
+      </ion-buttons>
+    </ng-container>
+
+    <ng-template #defaultHeaderTemplate>
+      <ion-segment
+        color='secondary'
+        value='todo'
+      >
+        <ion-segment-button value='todo'>
+          Todo
+        </ion-segment-button>
+        <ion-segment-button value='wip'>
+          In progress
+        </ion-segment-button>
+        <ion-segment-button value='favorites'>
+          Done
+        </ion-segment-button>
+      </ion-segment>
+    </ng-template>
+  </ion-toolbar>
+</ion-header>
+

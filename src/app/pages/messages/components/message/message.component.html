@@ -1,7 +1,7 @@
 <ion-item
   *ngIf='message'
-  [routerLink]="detailRoute"
   [detail]='false'
+  [routerLink]="['/message/' + message.uuid]"
 >
   <div
     slot='start'
