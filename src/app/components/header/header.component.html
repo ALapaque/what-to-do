@@ -1,4 +1,7 @@
-<ion-header [translucent]='true'>
+<ion-header
+  [translucent]='true'
+  slot='fixed'
+>
   <ion-toolbar>
     <ng-container *ngIf='isMessageDetailPage$ | async; else defaultHeaderTemplate'>
       <ion-buttons slot='start'>
@@ -11,16 +14,29 @@
         color='secondary'
         value='todo'
       >
-        <ion-segment-button value='todo'>
+        <ion-segment-button
+          [routerLink]="['']"
+          [queryParams]="{filter: 'todo'}"
+          value='todo'
+        >
           Todo
         </ion-segment-button>
-        <ion-segment-button value='wip'>
+        <ion-segment-button
+          [routerLink]="['']"
+          [queryParams]="{filter: 'wip'}"
+          value='wip'
+        >
           In progress
         </ion-segment-button>
-        <ion-segment-button value='favorites'>
+        <ion-segment-button
+          [routerLink]="['']"
+          [queryParams]="{filter: 'done'}"
+          value='done'
+        >
           Done
         </ion-segment-button>
       </ion-segment>
+
     </ng-template>
   </ion-toolbar>
 </ion-header>
