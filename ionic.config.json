@@ -1,0 +1,8 @@
+{
+  "name": "WhatToDo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "8a15381c"
+}
