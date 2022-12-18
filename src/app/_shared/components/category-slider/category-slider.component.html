@@ -1,0 +1,10 @@
+<ion-slide class='categories'>
+  <div [class]="'categories-buttons ' + category">
+    <span class='task-count'>TODO: {{taskService.getCategoryTodoCount(category) | async}}</span>
+    <span class='categories-name'>{{ category | uppercase }}</span>
+    <ion-progress-bar
+      mode='ios'
+      [value]='taskService.getCategoryProgressCount(category) | async'
+    ></ion-progress-bar>
+  </div>
+</ion-slide>

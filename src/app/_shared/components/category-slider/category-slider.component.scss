@@ -1,0 +1,51 @@
+.categories {
+  &-name {
+    font-size: large;
+    font-weight: 600;
+  }
+
+  &-buttons {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.8rem 1rem 1.1rem;
+    margin: 1rem 0 1.4rem 1rem;
+    border-radius: 1.4rem;
+    font-size: larger;
+    color: var(--ion-color-secondary-contrast);
+    background-color: var(--ion-card-background);
+    text-align: left;
+    box-shadow: var(--ion-card-box-shadow);
+
+    ion-icon,
+    .bx-envelope {
+      font-size: xx-large;
+    }
+
+    ion-progress-bar {
+      margin-top: 0.6rem;
+      --background: var(--ion-progressbar);
+    }
+
+    .task-count {
+      color: var(--ion-secondary-text-color);
+      font-size: small;
+    }
+
+    span {
+      margin-bottom: 0.7rem;
+    }
+  }
+}
+
+.business {
+  ion-progress-bar {
+    --progress-background: var(--td-magenta);
+  }
+}
+
+.personal {
+  ion-progress-bar {
+    --progress-background: var(--td-blue);
+  }
+}

@@ -1,0 +1,30 @@
+<form [formGroup]='taskForm'>
+  <div class='container'>
+    <ion-input
+      autofocus='true'
+      placeholder='Enter a task name'
+      [formControlName]="'name'"
+    ></ion-input>
+    <div
+      class='rounded'
+      (click)='toggleCategory()'
+    >
+      <ion-icon
+        id='radio-icon'
+        [class.radio-business]="taskForm.value!.category === 'business'"
+        [class.radio-personal]="taskForm.value!.category === 'personal'"
+        name='radio-button-on-outline'
+      ></ion-icon>
+    </div>
+  </div>
+
+  <ion-fab
+    vertical='bottom'
+    horizontal='end'
+    slot='fixed'
+  >
+    <ion-fab-button (click)='handleOnSubmit()'>
+      <ion-icon name='save-outline'></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</form>

@@ -1,0 +1,16 @@
+<ion-header
+  class='ion-no-border'
+  [translucent]='true'
+>
+  <ion-toolbar mode='ios'>
+    <div
+      class='close-outline'
+      (click)='modalController.dismiss()'
+    >
+      <ion-icon name='close-outline'></ion-icon>
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]='true'>
+  <app-task-form (onSubmitEmitter)='createNewTask($event)'></app-task-form>
+</ion-content>

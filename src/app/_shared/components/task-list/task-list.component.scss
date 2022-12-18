@@ -1,0 +1,15 @@
+.todays-header {
+  margin-top: 12px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  display: block;
+  margin-left: 1.2rem;
+  font-size: small;
+  letter-spacing: 0.5px;
+  color: var(--ion-secondary-text-color);
+}
+
+ion-list {
+  background-color: transparent;
+  border-radius: 1.3rem;
+}
