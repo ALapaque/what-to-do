@@ -1,5 +1,5 @@
 <ion-item-sliding>
-  <ion-item>
+  <ion-item class="item">
     <div
       *ngIf='task.done'
       class='circular-filled'
@@ -29,7 +29,7 @@
     <ion-item-option
       (click)='delete()'
       color='danger'
-      expandable
+      expandable="true"
     >Delete
     </ion-item-option>
   </ion-item-options>

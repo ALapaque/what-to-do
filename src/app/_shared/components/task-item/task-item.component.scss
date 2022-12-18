@@ -5,10 +5,11 @@ ion-item-sliding {
 
   ion-item {
     width: 100%;
-    background-color: var(--ion-card-background);
+    color: var(--ion-secondary-text-color);
+    background: var(--ion-card-background) !important;
 
     .item-native {
-      background-color: var(--ion-card-background) !important;
+      background: var(--ion-card-background) !important;
     }
   }
 }
