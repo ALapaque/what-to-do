@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core'
 import { Storage } from '@ionic/storage-angular'
-import { BehaviorSubject, from, map, Observable, of, tap } from 'rxjs'
+import { BehaviorSubject, map, Observable } from 'rxjs'
 import { Task } from 'src/app/_shared/models/task'
 
 @Injectable({
@@ -13,20 +13,7 @@ export class TaskService {
   constructor(
     private _storage: Storage
   ) {
-    this.tasks$ = new BehaviorSubject<Task[]>([
-      { uuid: '1', done: false, name: 'test 1', category: 'business' },
-      { uuid: '2', done: true, name: 'test 2', category: 'business' },
-      { uuid: '3', done: false, name: 'test 3', category: 'personal' },
-      { uuid: '4', done: true, name: 'test 4', category: 'personal' },
-      { uuid: '5', done: false, name: 'test 1', category: 'business' },
-      { uuid: '6', done: true, name: 'test 2', category: 'business' },
-      { uuid: '7', done: false, name: 'test 3', category: 'personal' },
-      { uuid: '8', done: true, name: 'test 4', category: 'personal' },
-      { uuid: '9', done: false, name: 'test 1', category: 'business' },
-      { uuid: '10', done: true, name: 'test 2', category: 'business' },
-      { uuid: '11', done: false, name: 'test 3', category: 'personal' },
-      { uuid: '12', done: true, name: 'test 4', category: 'personal' }
-    ])
+    this.tasks$ = new BehaviorSubject<Task[]>([])
   }
 
   get tasks(): Task[] {

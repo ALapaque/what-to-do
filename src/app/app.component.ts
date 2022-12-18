@@ -21,7 +21,7 @@ export class AppComponent {
           void storage.set('what-to-do', [])
         }
 
-        this._tasksService.tasks = tasks
+        this._tasksService.tasks = tasks || []
       })
     })
   }
