@@ -17,25 +17,10 @@ ion-toolbar {
 
 ion-content {
   --background: var(--ion-background-color, --td-bg);
+  display: grid;
+  grid-template-areas: "'header' 'content'";
+  grid-template-rows: max-content auto;
 }
-
-#container {
-  padding: 3rem 0rem;
-  padding-top: 1.5vh;
-
-  strong {
-    font-size: xx-large;
-    padding-left: 1.2rem;
-    letter-spacing: 0.5px;
-  }
-}
-
-
-
-
-
-
-
 
 ion-fab {
   bottom: 40px;

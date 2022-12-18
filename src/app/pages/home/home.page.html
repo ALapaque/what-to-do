@@ -1,19 +1,17 @@
-<ion-content [fullscreen]='true' class='ion-padding'>
-  <div id='container'>
-    <strong>WhatToDo, today ?!</strong>
-    <app-categories-slider></app-categories-slider>
+<ion-content [fullscreen]="true"
+             class="ion-padding">
+  <app-header></app-header>
 
-    <app-task-list></app-task-list>
-  </div>
+  <app-task-list></app-task-list>
 
   <ion-fab
-    id='trigger-button'
-    vertical='bottom'
-    horizontal='end'
-    slot='fixed'
+    id="trigger-button"
+    vertical="bottom"
+    horizontal="end"
+    slot="fixed"
   >
-    <ion-fab-button mode='ios'>
-      <ion-icon name='add'></ion-icon>
+    <ion-fab-button mode="ios">
+      <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 

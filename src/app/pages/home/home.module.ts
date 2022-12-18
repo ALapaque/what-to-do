@@ -12,6 +12,7 @@ import { TaskModalComponent } from 'src/app/_shared/components/task-modal/task-m
 import { HomePage } from 'src/app/pages/home/home.page'
 
 import { HomePageRoutingModule } from 'src/app/pages/home/home-routing.module'
+import { HeaderComponent } from '../../_shared/components/header/header.component';
 
 
 @NgModule({
@@ -25,7 +26,17 @@ import { HomePageRoutingModule } from 'src/app/pages/home/home-routing.module'
   exports: [
     TaskFormComponent
   ],
-  declarations: [ HomePage, TaskListComponent, TaskFormComponent, TaskItemComponent, CategoriesSliderComponent, NewTaskComponent, TaskModalComponent, CategorySliderComponent ]
+  declarations: [
+    HomePage,
+    HeaderComponent,
+    TaskListComponent,
+    TaskFormComponent,
+    TaskItemComponent,
+    CategoriesSliderComponent,
+    NewTaskComponent,
+    TaskModalComponent,
+    CategorySliderComponent
+  ]
 })
 export class HomePageModule {
 }

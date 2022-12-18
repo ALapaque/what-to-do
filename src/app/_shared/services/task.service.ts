@@ -57,15 +57,15 @@ export class TaskService {
 
   // update
   update(uuid: string, task: Task): void {
-    const tasks: Task[] = this.tasks
+    const tasks: Task[] = this.tasks;
+    const index: number = this.tasks.findIndex((task: Task) => task.uuid === uuid)
 
-    tasks.map((t: Task) => {
-      if (t.uuid == uuid) {
-        t = task
+    if (index !== -1) {
+      tasks[index] = {
+        ...task
       }
+    }
 
-      return t
-    })
 
     this.tasks$.next(tasks)
   }
