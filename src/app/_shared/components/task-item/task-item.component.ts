@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Task } from 'src/app/_shared/models/task'
 import { TaskService } from 'src/app/_shared/services/task.service'
 
@@ -8,18 +8,18 @@ import { TaskService } from 'src/app/_shared/services/task.service'
   styleUrls: [ './task-item.component.scss' ]
 })
 export class TaskItemComponent {
-  @Input() task!: Task
+  @Input() public task!: Task
 
   constructor(
-    private readonly _todoService: TaskService
+    private readonly _tasksService: TaskService
   ) {
   }
 
   public updateStatus(): void {
-    this._todoService.updateState(this.task.uuid)
+    this._tasksService.updateState(this.task.uuid)
   }
 
   public delete(): void {
-    this._todoService.delete(this.task.uuid)
+    this._tasksService.delete(this.task.uuid)
   }
 }

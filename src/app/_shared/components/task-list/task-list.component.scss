@@ -10,9 +10,15 @@ div.container {
     color: var(--ion-secondary-text-color);
   }
 
-  ion-list {
+  ion-reorder-group {
     background-color: transparent;
     border-radius: 1.3rem;
+
+    app-task-item {
+      &.reorder-selected {
+        border-radius: 1.3rem;
+      }
+    }
   }
 
 }

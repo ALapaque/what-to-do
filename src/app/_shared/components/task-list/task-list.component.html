@@ -1,10 +1,12 @@
 <div class="container">
   <span class="todays-header">TODAY'S TASKs</span>
 
-  <ion-list class="task-list">
+  <ion-reorder-group class="task-list"
+                     (ionItemReorder)="handleOnReorder($event)"
+                     [disabled]="taskService.tasks.length <= 1">
     <app-task-item
       *ngFor="let task of taskService.tasks$ | async"
       [task]="task"
     ></app-task-item>
-  </ion-list>
+  </ion-reorder-group>
 </div>

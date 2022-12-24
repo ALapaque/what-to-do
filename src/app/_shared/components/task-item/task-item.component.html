@@ -1,18 +1,20 @@
 <ion-item-sliding>
-  <ion-item class="item">
+  <ion-item button
+            detail="false"
+            class="item">
     <div
-      *ngIf='task.done'
-      class='circular-filled'
-      (click)='updateStatus()'
+      *ngIf="task.done"
+      class="circular-filled"
+      (click)="updateStatus()"
       [class.magenta]="task.category === 'business'"
       [class.blue]="task.category === 'personal'"
     >
-      <ion-icon name='checkmark'></ion-icon>
+      <ion-icon name="checkmark"></ion-icon>
     </div>
     <div
-      *ngIf='!task.done'
-      class='circular'
-      (click)='updateStatus()'
+      *ngIf="!task.done"
+      class="circular"
+      (click)="updateStatus()"
       [class.magenta]="task.category === 'business'"
       [class.blue]="task.category === 'personal'"
     >
@@ -23,12 +25,14 @@
     >
       {{ task.name }}
     </ion-label>
+
+    <ion-reorder slot="end"></ion-reorder>
   </ion-item>
 
-  <ion-item-options (ionSwipe)='delete()'>
+  <ion-item-options (ionSwipe)="delete()">
     <ion-item-option
-      (click)='delete()'
-      color='danger'
+      (click)="delete()"
+      color="danger"
       expandable="true"
     >Delete
     </ion-item-option>
