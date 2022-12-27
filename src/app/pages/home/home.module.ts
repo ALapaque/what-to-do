@@ -4,6 +4,7 @@ import { IonicModule } from '@ionic/angular'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { CategoriesSliderComponent } from 'src/app/_shared/components/categories-slider/categories-slider.component'
 import { CategorySliderComponent } from 'src/app/_shared/components/category-slider/category-slider.component'
+import { NewTaskTriggerComponent } from 'src/app/_shared/components/new-task-trigger/new-task-trigger.component'
 import { NewTaskComponent } from 'src/app/_shared/components/new-task/new-task.component'
 import { TaskFormComponent } from 'src/app/_shared/components/task-form/task-form.component'
 import { TaskListComponent } from 'src/app/_shared/components/task-list/task-list.component'
@@ -35,7 +36,8 @@ import { HeaderComponent } from '../../_shared/components/header/header.componen
     CategoriesSliderComponent,
     NewTaskComponent,
     TaskModalComponent,
-    CategorySliderComponent
+    CategorySliderComponent,
+    NewTaskTriggerComponent
   ]
 })
 export class HomePageModule {

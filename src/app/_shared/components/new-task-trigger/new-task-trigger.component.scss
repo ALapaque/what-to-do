@@ -1,0 +1,28 @@
+ion-item {
+  padding: 2px;
+  border: dotted 3px var(--ion-secondary-text-color);
+  border-radius: 12px;
+  color: var(--ion-secondary-text-color);
+
+  ion-label {
+    text-align: center;
+  }
+
+  &::part(native) {
+    padding: 0 20px;
+
+    .item-inner {
+      border-bottom-width: 0 !important;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      --border-color: var(--ion-background-color);
+      background: var(--ion-background-color);
+    }
+
+    @media (prefers-color-scheme: light) {
+      --border-color: var(--ion-background-color);
+      background: var(--ion-background-color);
+    }
+  }
+}

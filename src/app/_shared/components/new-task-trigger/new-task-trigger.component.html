@@ -1,0 +1,24 @@
+<ion-fab
+  *ngIf='useFabButton'
+  [id]='id'
+  vertical='bottom'
+  horizontal='end'
+  slot='fixed'
+>
+  <ion-fab-button mode='ios'>
+    <ion-icon name='add'></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+<ion-item
+  *ngIf='!useFabButton'
+  [id]='id'
+  button
+  id='new-task-trigger'
+  detail='false'
+  class='item'
+>
+  <ion-label>
+    Create a task
+  </ion-label>
+</ion-item>
