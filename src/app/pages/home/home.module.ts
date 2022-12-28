@@ -12,7 +12,6 @@ import { NewTaskTriggerComponent } from 'src/app/_shared/components/new-task-tri
 import { NewTaskComponent } from 'src/app/_shared/components/new-task/new-task.component'
 import { TaskFormComponent } from 'src/app/_shared/components/task-form/task-form.component'
 import { TaskListComponent } from 'src/app/_shared/components/task-list/task-list.component'
-import { TaskItemComponent } from 'src/app/_shared/components/task-item/task-item.component'
 import { TaskModalComponent } from 'src/app/_shared/components/task-modal/task-modal.component'
 import { HomePage } from 'src/app/pages/home/home.page'
 
@@ -38,7 +37,6 @@ import { HomePageRoutingModule } from 'src/app/pages/home/home-routing.module'
     CategorySliderComponent,
     TaskListComponent,
     TaskFormComponent,
-    TaskItemComponent,
     NewTaskComponent,
     TaskModalComponent,
     NewTaskTriggerComponent

@@ -17,18 +17,17 @@ export class TaskListComponent {
   ) {
   }
 
-  public handleOnReorder($event?: any) {
-    // Before complete is called with the items they will remain in the
-    // order before the drag
-    console.log('Before complete', this.taskService.tasks);
+  public updateStatus(task: Task): void {
+    this.taskService.updateState(task.uuid)
+  }
 
-    // Finish the reorder and position the item in the DOM based on
-    // where the gesture ended. Update the items variable to the
-    // new order of items
+  public delete(task: Task): void {
+    this.taskService.delete(task.uuid)
+  }
+
+  public handleOnReorder($event: CustomEvent<ItemReorderEventDetail>) {
     const updated: Task[] = $event.detail.complete(this.taskService.tasks);
-    this.taskService.tasks$.next(updated)
 
-    // After complete is called the items will be in the new order
-    console.log('After complete', this.taskService.tasks);
+    this.taskService.tasks$.next(updated)
   }
 }
