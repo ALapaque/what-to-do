@@ -4,14 +4,15 @@
     margin-bottom: 14px;
     background: transparent;
 
-
     ion-item {
       width: 100%;
       color: var(--ion-secondary-text-color);
 
+
       &::part(native) {
         .item-inner {
           border-bottom-width: 0 !important;
+
         }
 
         @media (prefers-color-scheme: dark) {

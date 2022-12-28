@@ -1,5 +1,5 @@
 import { Component } from '@angular/core'
-import { TaskService } from 'src/app/_shared/services/task.service'
+import { CategoryService } from 'src/app/_shared/services/category.service'
 
 @Component({
   selector: 'app-categories-slider',
@@ -13,7 +13,7 @@ export class CategoriesSliderComponent {
   }
 
   constructor(
-    public taskService: TaskService
+    public readonly categoryService: CategoryService
   ) {
   }
 

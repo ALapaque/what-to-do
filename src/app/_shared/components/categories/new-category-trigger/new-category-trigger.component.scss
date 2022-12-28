@@ -1,0 +1,27 @@
+.category {
+  .category-add-buttons {
+    min-height: 120px;
+    min-width: 100px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 1.4rem 1rem;
+    border-radius: 1.4rem;
+    font-size: larger;
+    background-color: var(--ion-card-background);
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+
+    &:hover {
+      background-color: transparent;
+    }
+    ion-icon,
+    .bx-envelope {
+      font-size: xx-large;
+    }
+
+    span {
+      margin-bottom: 0.7rem;
+    }
+  }
+}

@@ -5,6 +5,8 @@
   }
 
   &-buttons {
+    min-height: 120px;
+    min-width: 100px;
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -15,7 +17,7 @@
     color: var(--ion-color-secondary-contrast);
     background-color: var(--ion-card-background);
     text-align: left;
-    box-shadow: var(--ion-card-box-shadow);
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 
     ion-icon,
     .bx-envelope {

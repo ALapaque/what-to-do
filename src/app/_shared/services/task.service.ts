@@ -7,13 +7,12 @@ import { Task } from 'src/app/_shared/models/task'
   providedIn: 'root'
 })
 export class TaskService {
-  public readonly tasks$: BehaviorSubject<Task[]>
+  public readonly tasks$: BehaviorSubject<Task[]> = new BehaviorSubject<Task[]>([])
   public storage: Storage | undefined
 
   constructor(
-    private _storage: Storage
+    private readonly _storage: Storage
   ) {
-    this.tasks$ = new BehaviorSubject<Task[]>([])
   }
 
   get tasks(): Task[] {
@@ -58,7 +57,7 @@ export class TaskService {
   // update
   update(uuid: string, task: Task): void {
     const tasks: Task[] = this.tasks;
-    const index: number = this.tasks.findIndex((task: Task) => task.uuid === uuid)
+    const index: number = tasks.findIndex((task: Task) => task.uuid === uuid)
 
     if (index !== -1) {
       tasks[index] = {
