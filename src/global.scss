@@ -45,6 +45,10 @@ strong {
   letter-spacing: 0.5px;
 }
 
+ion-toolbar {
+  --background: var(--ion-background-color);
+}
+
 ion-fab-button {
   --background: var(--ion-fab-button-background);
   --background-activated: var(--ion-fab-button-background-activated);

@@ -7,6 +7,7 @@ import { CategorySliderComponent } from 'src/app/_shared/components/categories/c
 import {
   NewCategoryTriggerComponent
 } from 'src/app/_shared/components/categories/new-category-trigger/new-category-trigger.component'
+import { HeaderComponent } from 'src/app/_shared/components/header/header.component'
 import { NewTaskTriggerComponent } from 'src/app/_shared/components/new-task-trigger/new-task-trigger.component'
 import { NewTaskComponent } from 'src/app/_shared/components/new-task/new-task.component'
 import { TaskFormComponent } from 'src/app/_shared/components/task-form/task-form.component'
@@ -16,7 +17,6 @@ import { TaskModalComponent } from 'src/app/_shared/components/task-modal/task-m
 import { HomePage } from 'src/app/pages/home/home.page'
 
 import { HomePageRoutingModule } from 'src/app/pages/home/home-routing.module'
-import { HeaderComponent } from '../../_shared/components/header/header.component';
 
 
 @NgModule({
